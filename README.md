@@ -8,7 +8,7 @@
 ```
 
 # MuttSlicer
-A list-like object that can apply child methods across a slice
+A list-like object that can apply list element methods across a slice
 
 ```python
 >>> from muttslicer import Slicer
