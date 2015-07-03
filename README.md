@@ -17,6 +17,10 @@ A list-like object that can apply list element methods across a slice
 >>> x[1:100].foo_instance_func()
 ```
 
+### Problem Statement
+A creative and playful engineer once asked, "I know I can do `alist[1].method_call()`. I want to do `alist[1:100].method_call()`". And thus a mildly-useful-but-still-absurd data type was born.
+
+
 ### Example
 Given classes that hold state and functions that mutate state below. Do stuff like [this over here](docs/muttslicer_example.ipynb)
 
@@ -89,7 +93,7 @@ class Bar(AbstractBase):
 ```
 
 
-# Installation
+### Installation
 0. clone the repsitory
 
 0. run `python setup.py develop`. Requires `setuptools` to be installed
