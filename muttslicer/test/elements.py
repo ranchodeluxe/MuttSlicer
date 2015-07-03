@@ -15,6 +15,18 @@ class Foo(AbstractBase):
     def __init__(self,data_dict):
         self.data_dict = data_dict
 
+    def __str__(self):
+        return "{}{}".format(
+            type(self).__name__,
+            self.data_dict
+        )
+
+    def __repr__(self):
+        return "{}{}".format(
+            type(self).__name__,
+            self.data_dict
+        )
+
     def combine(self,update_dict):
         self.data_dict['combine'] = zip(self.data_dict.keys(),update_dict.values())
 
@@ -28,6 +40,18 @@ class Bar(AbstractBase):
 
     def __init__(self,data_list):
         self.data_list = data_list
+
+    def __str__(self):
+        return "{}{}".format(
+            type(self).__name__,
+            self.data_list
+        )
+
+    def __repr__(self):
+        return "{}{}".format(
+            type(self).__name__,
+            self.data_list
+        )
 
     def combine(self,update_dict):
         self.data_list.append(
