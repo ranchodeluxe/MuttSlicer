@@ -26,17 +26,17 @@ class Base(object):
 
 class Foo(Base):
     def __init__(self,init_dict):
- 	self.data = init_dict
+        self.data = init_dict
 
     def merge(self,update_dict):
         self.data.update(**update_dict)
 
 class Bar(Base):
     def __init__(self,init_list):
- 	self.data = init_list
+        self.data = init_list
 
     def merge(self,update_dict):
-	self.data = update_dict.keys()
+        self.data = update_dict.keys()
 ```
 
 Do stuff like this:
