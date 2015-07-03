@@ -47,9 +47,9 @@ Do stuff like this:
 ```
 
 # Installation
-0. Checkout the repsitory
+0. clone the repsitory
 
-0. Run `python setup.py develop`. Requires `setuptools` to be installed
+0. run `python setup.py develop`. Requires `setuptools` to be installed
 
-0. Look at the tests
+0. look at the tests
 
