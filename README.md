@@ -18,7 +18,7 @@ A list-like object that can apply list element methods across a slice
 ```
 
 ### Problem Statement
-A creative and playful engineer once asked, "I know I can do `alist[1].method_call()`. I want to do `alist[1:100].method_call()`". And thus a mildly-useful-but-still-absurd data type was born.
+A creative and playful engineer once noted, "I can do this -- `alist[1].method_call()`. I want to do this -- `alist[1:100].method_call()`". And thus a mildly-useful-but-still-absurd data type was born.
 
 
 ### Example
