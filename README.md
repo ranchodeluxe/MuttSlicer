@@ -1,4 +1,4 @@
-```bash
+```javascript
               _   _   __ _ _               
   /\/\  _   _| |_| |_/ _\ (_) ___ ___ _ __ 
  /    \| | | | __| __\ \| | |/ __/ _ \ '__|
@@ -8,12 +8,12 @@
 ```
 
 # MuttSlicer
-A list-like sequence that allows it's child element methods to be called across a slice
+A list-like object that can apply child methods across a slice
 
 ```python
 >>> from muttslicer import Slicer
->>> x = Slicer( FooClass, [Foo(),Foo(),Foo(),Foo()] )
->>> x[1:100].foo_func()
+>>> x = Slicer( FooClass, [FooClass(),FooClass(),...] )
+>>> x[1:100].foo_instance_func()
 ```
 
 ### Example
