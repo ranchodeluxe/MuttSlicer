@@ -50,7 +50,6 @@ class Slicer(collections.MutableSequence):
         self.items.append(item)
 
     def __getitem__(self, key):
-        print key
         if isinstance(key, slice):
             #
             #  in certain cases, like when __getslice__
