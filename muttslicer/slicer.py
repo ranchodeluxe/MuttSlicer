@@ -63,7 +63,7 @@ class Slicer(collections.MutableSequence):
             #
             return self.__class__(
                 self.class_type,
-                [ self.items[i] for i in xrange( key.start, key.stop, key.step ) ]
+                self.items[key.start:key.stop:key.step]
             )
         #
         #  handles single index lookups
