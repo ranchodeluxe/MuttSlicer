@@ -1,3 +1,4 @@
+![Build Status](https://api.travis-ci.org/thebigspoon/MuttSlicer.svg)
 ```javascript
               _   _   __ _ _               
   /\/\  _   _| |_| |_/ _\ (_) ___ ___ _ __ 
