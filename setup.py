@@ -11,7 +11,6 @@ setup(
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
-        'Topic :: Absurd Data Structure :: Absurd Tools',
         'Programming Language :: Python :: 2.7',
     ],
     keywords='experimental whynot',
