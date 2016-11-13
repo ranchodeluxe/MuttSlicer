@@ -1,5 +1,5 @@
-![Build Status](https://api.travis-ci.org/thebigspoon/MuttSlicer.svg)
-```javascript
+![Build Status](https://travis-ci.org/ranchodeluxe/MuttSlicer.svg?branch=master)
+```python
               _   _   __ _ _               
   /\/\  _   _| |_| |_/ _\ (_) ___ ___ _ __ 
  /    \| | | | __| __\ \| | |/ __/ _ \ '__|
