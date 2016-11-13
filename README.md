@@ -1,5 +1,5 @@
 ![Build Status](https://travis-ci.org/ranchodeluxe/MuttSlicer.svg?branch=master)
-```python
+```bash
               _   _   __ _ _               
   /\/\  _   _| |_| |_/ _\ (_) ___ ___ _ __ 
  /    \| | | | __| __\ \| | |/ __/ _ \ '__|
