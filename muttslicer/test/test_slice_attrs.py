@@ -1,4 +1,4 @@
-from elements import AbstractBase,Foo,Bar
+from .elements import Base,Foo,Bar
 import unittest
 from muttslicer.slicer import Slicer
 
@@ -45,7 +45,7 @@ class TestSliceAttrs(unittest.TestCase):
 
     def test_getitem_with_start_stop_step(self):
         # ARRANGE
-        slicer = Slicer(AbstractBase,self.combined_list)
+        slicer = Slicer(Base,self.combined_list)
 
         # ACT
         sliced_result = slicer[0:5:2]
@@ -59,7 +59,7 @@ class TestSliceAttrs(unittest.TestCase):
 
     def test_getitem_with_empty_start_stop(self):
         # ARRANGE
-        slicer = Slicer(AbstractBase,self.combined_list)
+        slicer = Slicer(Base,self.combined_list)
 
         # ACT
         sliced_result = slicer[:]
@@ -71,7 +71,7 @@ class TestSliceAttrs(unittest.TestCase):
 
     def test_getitem_single_index_and_mutate(self):
         # ARRANGE
-        slicer = Slicer(AbstractBase,self.combined_list)
+        slicer = Slicer(Base,self.combined_list)
         combine_update = {'z':100}
 
         # ACT
@@ -83,7 +83,7 @@ class TestSliceAttrs(unittest.TestCase):
 
     def test_getitem_slice_and_mutate(self):
         # ARRANGE
-        slicer = Slicer(AbstractBase,self.combined_list)
+        slicer = Slicer(Base,self.combined_list)
         merge_update = {'z':100}
 
         # ACT
@@ -97,4 +97,19 @@ class TestSliceAttrs(unittest.TestCase):
         self.assertIn('z', bar_result.items[1].data_list)
         self.assertIn(100, bar_result.items[1].data_list)
 
+    # def test_getitem_single_slice_and_mutate(self):
+    #     # ARRANGE
+    #     slicer = Slicer(Base,self.combined_list)
+    #     merge_update = {'z':100}
+    #
+    #     # ACT
+    #     foo_result = slicer[4:].merge(merge_update)
+    #     bar_result = slicer[0:2].merge(merge_update)
+    #
+    #     # ASSERT
+    #     self.assertEqual(len(foo_result),3)
+    #     self.assertEqual(foo_result.items[0].data_dict['z'],100)
+    #     self.assertEqual(foo_result.items[2].data_dict['z'],100)
+    #     self.assertIn('z', bar_result.items[1].data_list)
+    #     self.assertIn(100, bar_result.items[1].data_list)
 

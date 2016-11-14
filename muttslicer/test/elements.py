@@ -1,5 +1,5 @@
 
-class AbstractBase(object):
+class Base(object):
 
     def combine(self,update_dict):
         raise NotImplemented('you must implement combine')
@@ -10,7 +10,7 @@ class AbstractBase(object):
     def merge(self,update_dict):
         raise NotImplemented('you must implement merges')
 
-class Foo(AbstractBase):
+class Foo(Base):
 
     def __init__(self,data_dict):
         self.data_dict = data_dict
@@ -28,7 +28,7 @@ class Foo(AbstractBase):
         )
 
     def combine(self,update_dict):
-        self.data_dict['combine'] = zip(self.data_dict.keys(),update_dict.values())
+        self.data_dict['combine'] = list(zip(self.data_dict.keys(),update_dict.values()))  # python3 compatibility
 
     def flatten(self):
         self.data_dict['flatten'] = self.data_dict.items()
@@ -36,7 +36,7 @@ class Foo(AbstractBase):
     def merge(self,update_dict):
         self.data_dict.update(**update_dict)
 
-class Bar(AbstractBase):
+class Bar(Base):
 
     def __init__(self,data_list):
         self.data_list = data_list
@@ -55,7 +55,7 @@ class Bar(AbstractBase):
 
     def combine(self,update_dict):
         self.data_list.append(
-            zip(self.data_list,update_dict.keys())
+            list(zip(self.data_list,update_dict.keys())) # python3 compatibility
         )
 
     def flatten(self):

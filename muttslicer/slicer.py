@@ -1,5 +1,7 @@
 import inspect
 import collections
+import logging
+logger = logging.getLogger(__name__)
 
 class Slicer(collections.MutableSequence):
 
@@ -56,7 +58,7 @@ class Slicer(collections.MutableSequence):
             #  forwards calls to __getitem__
             #  the default key.stop value might be large
             #
-            if key.stop > len(self.items):
+            if key.stop is None or key.stop > len(self.items):
                 key = slice(key.start,len(self.items),key.step)
             #
             #  handles slices with start, stop, step
@@ -79,8 +81,6 @@ class Slicer(collections.MutableSequence):
 
     def _rebind_and_wrap(self):
         for name, func in inspect.getmembers( self.class_type ):
-            if not inspect.ismethod( func ):
-                continue
 
             if name.startswith( '__' ) or name.endswith( '__' ):
                 continue
@@ -91,7 +91,7 @@ class Slicer(collections.MutableSequence):
             #  so we can handle different calling signatures
             #  when the func is invoked on Slicer
             #
-            setattr( self, name, self._create_wrapper(func.im_func) )
+            setattr( self, name, self._create_wrapper(func) )
 
     def _create_wrapper(self,func):
         def decorate(*args,**kwargs):

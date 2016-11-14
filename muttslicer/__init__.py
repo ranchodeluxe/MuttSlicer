@@ -1,1 +1,1 @@
-from slicer import Slicer
+from .slicer import Slicer
