@@ -64,3 +64,18 @@ class Bar(Base):
     def merge(self,update_dict):
         self.data_list.extend(update_dict.keys())
         self.data_list.extend(update_dict.values())
+
+class Baz(object):
+
+    def __init__(self,items):
+        self.items = items
+
+    def __repr__(self):
+        return str(self.items)
+
+    def add(self, i):
+        self.items = [x+i for x in self.items]
+
+    def sub(self, i):
+        self.items = [x-i for x in self.items]
+
