@@ -96,7 +96,15 @@ class Bar(AbstractBase):
 ### Installation
 0. clone the repsitory
 
+0. create a virtualenv ( compatiable with 2.7, 3.4, 3.5 )
+
+```bash
+virtualenv --python=python3.5 venv
+source venv/bin/activate
+```
 0. run `python setup.py develop`. Requires `setuptools` to be installed
+
+0. if running tests, pip install the requirements `pip install -r requirements.txt`
 
 0. look at the tests
 
